@@ -11,55 +11,49 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kristi" rel="stylesheet">
+    
 </head>
 <body>
-
+<div class = "full">
+  <img src  ="assets/images/1.jpg">
+  </div>
         <h1> THE HARRY POTTER WORD GUESS </h1>
 
 		
        <h2 class= "container"> Press any key to get started! </h2>            
 
- 			<br><br>
-<!--displaying bars -->
+       <br><br>
+       
  		<div id ="secretAnswer">
   		</div>
 
 		<br>
 
-		<h2 class= "container"> Guesses Left </h2>
+		<h2 class= "container1"> Guesses Left </h2>
 
  			<div id ="guessesLeft">
  			</div>
 			<br>
 
-		<h2 class= "container"> Answers Already Guessed </h2>
+		<h2 class= "container2"> Alphabets Already Guessed </h2>
 
  			<div id="answersGuessed">
  			</div>
 			<br>
 
-		<h2 class= "container"> Loss </h2>
+		<h2 class= "container3"> Loss </h2>
 			<div id="losses">
  			</div>
 			<br>
 		
-		<h2 class= "container"> Win </h2>
+		<h2 class= "container4"> Win </h2>
 			<div id= "game">
 			</div>
 			<br> 
-
-		<div id="audio">
-		</div>
-
-		<div id="picture">
-		</div>
-
 	</div>
-
+  <iframe src="https://www.youtube.com/watch?v=1Li0SWlwe34"></iframe>
 
     
 <script type="text/javascript">
@@ -81,9 +75,6 @@ var word = ["hogwarts", "hermoine","dumbledore","malfoy","hagrid"];
     letters = actualWord.split("");
     num = letters.length;
 
-    // console.log(num);
-    // console.log(letters);
-    // console.log(actualWord)
 
     guessesLeft = 12;
     wrongLetters = [];
@@ -149,7 +140,7 @@ function rounds() {
   }
 };
 
-//event listener
+
 document.onkeypress = function(event) {
   var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
   console.log(userGuess);
